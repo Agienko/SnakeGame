@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="./img/ico.png" type="image/x-icon">
+    <link rel="stylesheet" href="./styles/style.css">
+    <link rel="stylesheet" href="./styles/game.css">
+    <link rel="stylesheet" href="./styles/menu.css">
+    <link rel="stylesheet" href="./styles/form.css">
+    <link rel="stylesheet" href="./styles/footer.css">
+    <title>Snake Game</title>
+</head>
+<body>
+    <nav class="navBar">
+        <div class="menu_wrapper_Btn">
+            <button id="newGameBtn">Новая игра</button>
+            <button id="startGameBtn">Старт</button>
+        </div>
+        <div class="menu_wrapper">
+            <label for="speed">Скорость</label>
+            <select name="Скорость" id="speed">
+                <option selected value="500">1</option>
+                <option value="450">2</option>
+                <option value="400">3</option>
+                <option value="350">4</option>
+                <option value="300">5</option>
+                <option value="250">6</option>
+                <option value="200">7</option>
+                <option value="150">8</option>
+                <option value="100">9</option>
+                <option value="50">10</option>
+            </select>
+        </div>
+        <div class="menu_wrapper">
+            <label for="level">Уровень</label>
+            <select name="Уровень" id="level">
+                <option selected value="0">0</option>
+                <option value="1">1</option>
+                <option value="2" >2</option>
+                <option value="3" >3</option>
+                <option value="4" >4</option>
+                <option value="5" >5</option>
+                <option value="6" >6</option>
+                <option value="7" >7</option>
+                <option value="8" >8</option>
+                <option value="9" >9</option>
+                <option value="10">10</option>
+            </select>
+        </div>
+        <div class="menu_wrapper">
+            <label for="throughTheWalls">Сквозь стены</label>
+            <select name="Сквозь стены" id="throughTheWalls">
+                <option selected value="true">Да</option>
+                <option value="">Нет</option>
+            </select>
+        </div>
+        <div class="menu_wrapper_score">
+           <span id="score"> Очки: 0 </span>
+           <span id="scoreSize"> Длинна: 3 </span>
+        </div>
+        <div class="menu_wrapper_user">
+            <span id="user"></span>
+        </div>
+        <button id="registration"> Войти</button>
+    </nav>
+    <main id="gameSquare">
+    </main>
+    <form action="" class="postcard">
+        <div class="form-row">
+            <label for="name">Ваше имя</label>
+            <input type="text" id="name" required>
+        </div>
+        <div class="form-row">
+            <input type="submit" value="Ok">
+        </div>
+    </form>
+<footer> 
+    <span class="regText">Добро пожаловать! Войдите для получения дополнительных возможностей</span>
+</footer>
+    <script src="./js/index.js" type="module"></script>
+</body>
+</html>

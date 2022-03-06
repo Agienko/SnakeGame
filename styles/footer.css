@@ -1,0 +1,14 @@
+footer{
+    position: fixed;
+    display: flex;
+    justify-content: center;
+    background-color:rgba(207, 248, 25, 0.856);
+    width: 100%;
+    height: 20px;
+    bottom: 0;  
+  }
+
+.regText{
+      font-style: italic;
+      font-weight: 100;
+  }

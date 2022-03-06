@@ -1,0 +1,1 @@
+export const regText = document.querySelector('.regText')

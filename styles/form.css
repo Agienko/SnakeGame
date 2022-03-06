@@ -1,0 +1,48 @@
+form{
+   opacity: 0;
+   display: none;
+   transition: opacity 0.5s linear;
+}
+.postcard {
+   position: absolute;
+   max-width: 340px;
+   right: 50px;
+   margin: 70px auto 0;
+   padding: 20px;
+   background: #fffdee;
+   border: 10px solid transparent;
+   border-image: 10 repeating-linear-gradient(135deg, #c4c120, #3bc420 10px, transparent 10px, transparent 20px, #f7fbcf 20px, #cffbe3 30px, transparent 30px, transparent 40px);
+   font-family: 'Playfair Display';
+   color: #5b6056;
+}
+.form-row {
+   margin-bottom: 15px;
+}
+.form-row input[type="text"] {
+   width: 100%;
+   padding: 0 10px;
+   line-height: 35px;
+   border-width: 0;
+   outline: none;
+   background: transparent url(https://html5book.ru/wp-content/uploads/2016/12/bg-form.png) bottom left repeat-x;
+   background-size: 8px 35px;
+   font-family: 'Playfair Display';
+}
+ 
+.form-row input[type="submit"] {
+   padding: 10px 20px;
+   margin-top: 10px;
+   background: #67c564;
+   border-width: 0;
+   cursor: pointer;
+   outline: none;
+   font-family: 'Playfair Display';
+   font-size: 13px;
+   letter-spacing: 1px;
+   color: #fffdee;
+   text-transform: uppercase;
+   transition: 1s cubic-bezier(.165, .84, .44, 1);
+}
+.form-row input[type=submit]:hover {
+   background: #18aa20;
+}

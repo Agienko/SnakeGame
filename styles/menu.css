@@ -1,0 +1,31 @@
+.navBar{
+    margin-bottom: 10px;
+    padding: 5px;
+    align-self: center;
+    background-color:rgba(33, 185, 13, 0.856);
+    display: flex;
+    justify-content: space-between;
+    white-space: nowrap;
+}
+.navBar select{
+   border-radius: 5px;
+}
+
+.menu_wrapper, .menu_wrapper_score, .menu_wrapper_user{
+    opacity: 0;
+    transition: opacity 0.5s linear;
+    align-self: center;
+}
+
+.menu_wrapper_user{
+    margin-right: 10px;
+}
+span{
+    font-weight: bold;
+}
+#score{
+    margin-right: 18px;
+}
+
+
+
