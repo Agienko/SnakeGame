@@ -33,6 +33,7 @@ export function registrationForm(){
     user.name = document.forms[0].children[0].children[1].value
     if (user.name) {
       hello.play()
+      regText.className = 'regText'
       regText.textContent = ''
       setTimeout(()=> registration.style.display = 'none', 5)
       userMenu.style.opacity  = '1'
