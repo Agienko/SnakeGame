@@ -23,3 +23,11 @@ button{
 button:hover{
     background-color:rgba(240, 248, 255, 0.39);
 }
+
+.endGame{
+    color: rgb(255, 45, 45);
+    text-shadow: 1px 1px 8px rgba(0, 0, 0, 0.671);
+    margin:  50px auto;
+    text-align: center;
+    user-select: none;
+}

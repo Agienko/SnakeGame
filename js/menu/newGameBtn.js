@@ -8,6 +8,7 @@ import { user } from "../user.js"
 import { btnSound } from "../game/audio.js"
 
 export function newGame(){
+    snake.isAlive = true
     btnSound.play()
     if(user.name) menuWrapper.forEach(menu => menu.style.opacity = '1')
     user.clearScore()
@@ -24,4 +25,4 @@ export function newGame(){
     stone.clearArr()
     stone.createCordsArr(levelValue)
     stone.draw()
-  }
+}

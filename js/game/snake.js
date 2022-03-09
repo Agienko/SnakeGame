@@ -8,7 +8,26 @@ import { user } from '../user.js'
 import { goSound, eatSound, crashSound, bonusTakeSound } from "./audio.js"
 
 export const snake ={
+    deadTitle:  document.createElement('h1'),
+    isAlive: true,
     body: [[], [], []], // массив с координатами тела змейки
+    end(){
+        this.isAlive = false
+        this.deadTitle.className ='modalWrapper'
+        this.deadTitle.innerHTML = `
+            <h2 class ="endGame">Игра оконечна.</h2> 
+            <p class ="endGame">Набрано очков: ${user.score}. </p>
+            <p class ="endGame">Длинна змейки: ${user.maxSnakeLength}</p>
+    `
+        document.body.append(this.deadTitle)
+        setTimeout(()=> this.deadTitle.style.opacity = '1', 0 )
+        const handler =() =>{
+            this.deadTitle.removeEventListener('click', handler)
+            this.deadTitle.style.opacity = '0'
+            setTimeout(()=> this.deadTitle.remove(), 200)
+            }
+        this.deadTitle.addEventListener('click', handler)
+    },
     head(){return this.body[0]},
     bodyRandom(){//Вставляет начальную змейку рандомно по горизонтали(кроме последней колонки)
         this.body[0][0] = Math.floor(Math.random()*20 + 2)*step;
@@ -29,6 +48,7 @@ export const snake ={
     crash(coord){ //Проверка на столкновение, внутрь передаются координаты обьектов столкновения
         for (let i = 1; i < coord.length; i++){
             if(this.head()[0] === coord[i][0] && this.head()[1] === coord[i][1]){
+                this.end()
                return true
             }
         } return false
@@ -37,6 +57,7 @@ export const snake ={
         if(this.crash(this.body) || this.crash(stone.cords)){// проверка на столкновение с собой и камнями
             clearInterval(stopInterval) 
             crashSound.play()
+            this.end()
         } else {
             const fragments = document.querySelectorAll('.snake')
             fragments.forEach(fragment => fragment.remove())
@@ -70,9 +91,7 @@ export const snake ={
             }else {
                 this.body.pop();
             }
-
             this.body.unshift([cordX, cordY])
-
             goSound.pause()
             goSound.currentTime = '0'
             goSound.play()

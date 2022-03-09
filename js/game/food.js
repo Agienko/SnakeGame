@@ -1,6 +1,7 @@
 import { snake } from "./snake.js";
 import { step } from "./keyManager.js";
 import { stone } from "./stone.js";
+import { bonusFood } from "./bonusFood.js";
 
 export const food = {
     foodOne: document.createElement('div'),
@@ -9,7 +10,7 @@ export const food = {
         do { 
             this.cords[0] = Math.floor(Math.random()*23)*step;
             this.cords[1] = Math.floor(Math.random()*35)*step;
-            } while(this.inSome(snake.body) || this.inSome(stone.cords)) 
+            } while(this.inSome(snake.body) || this.inSome(stone.cords) || this.inSome(bonusFood.cords)) 
     },
     inSome(someCoords){//проверка на попадание на какой-либо объект
         for (let coord of someCoords) {

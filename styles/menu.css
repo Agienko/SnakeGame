@@ -10,13 +10,11 @@
 .navBar select{
    border-radius: 5px;
 }
-
 .menu_wrapper, .menu_wrapper_score, .menu_wrapper_user{
     opacity: 0;
     transition: opacity 0.5s linear;
     align-self: center;
 }
-
 .menu_wrapper_user{
     margin-right: 10px;
 }
